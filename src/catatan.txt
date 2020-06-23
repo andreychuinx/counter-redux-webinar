@@ -1,0 +1,25 @@
+- npx create-react-app "nama folder"
+- cd "nama folder"
+- npm install react-redux redux
+- rubah index js
+  - import dulu module redux dan react-redux
+  - import { createStore } from 'redux'
+  - import { provider } from 'react-redux'
+  - bikin reducernya
+    - pake initialState
+  buat storenya pakai createStore
+  masukan reducernya ke dalam parameter createStore
+  bungkus component App.js ke dalam component Provider
+  isi props Provider dengan nama store isinya nama variable saat bikin createStore
+
+App.js
+
+apus semua
+import module connect.react-redux
+import { connect } from 'react-redux'
+ganti export menjadi connect
+export default connect(mapstateToProps, mapDispatchToProps)("Nama componnet")
+
+bikin 1 function parameternya state, namanya mapStateToProps returnnya object, isi object nama key bebas dan nama valuenya itu berdasarkan initialState di reducer
+
+masukkan data dari mapStateToProps ke dalam react render
